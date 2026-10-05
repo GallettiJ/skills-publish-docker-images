@@ -39,11 +39,3 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
-          run: |
-             docker build . --tag ghcr.io/gallettij/skills-publish-docker-images/stackoverflown:main
-             docker push ghcr.io/gallettij/skills-publish-docker-images/stackoverflown:main
-             with:
-              context: .
-              push: true
-              platforms: linux/amd64,linux/arm64
-              tags: ${{ steps.meta.outputs.tags }}
